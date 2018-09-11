@@ -15,11 +15,11 @@ public class MonsterController
 	{
 		
 		//Job 1: initialize data members!
-		myMonster = new MarshmallowMonster("Pepe", 4.0, 4 , true, 1);
+		myMonster = new MarshmallowMonster("Pepe", 1, 4 , true, 6);
 		
 		
 	}
-//--------------CONSTRUCTOR SECTION---------------
+//--------------CONSTRUCTOR SECTION---------------0
 	
 
 	
