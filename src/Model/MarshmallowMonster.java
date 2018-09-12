@@ -9,7 +9,6 @@ public class MarshmallowMonster
 	private int eyeCount;
 	private boolean hasNoses;
 	private int armCount;
-
 //--------------DATA MEMBER SECTION---------------
 
 	
@@ -27,8 +26,7 @@ public class MarshmallowMonster
 	
 	
 //--------------------Getter----------------------
-//makes all the data members content public
-	
+//makes all the data members content public	
 	public String getName() 
 	{
 		return name;
@@ -53,14 +51,13 @@ public class MarshmallowMonster
 	{
 		return armCount;
 	}
-//----------------------Getter--------------------
+//-------------------Getter----------------------
 	
 	
 //-------------------Setters----------------------
-	
 	public void setName(String name)
 	{
-		//this is reffering to the arrgument
+		//this.name is pointing to the string name
 		this.name = name;
 	}
 	

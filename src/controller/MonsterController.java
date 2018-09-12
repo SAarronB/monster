@@ -1,8 +1,9 @@
 package controller;
 
+//----------------Imports-------------------------
 import java.util.Scanner;
-
 import model.MarshmallowMonster;
+//----------------Imports-------------------------
 
 public class MonsterController
 {
@@ -12,20 +13,15 @@ public class MonsterController
 //--------------DATA MEMBER SECTION---------------
 		
 
-	
 //--------------CONSTRUCTOR SECTION---------------
 	public MonsterController()
 	{
-		
 		//Job 1: initialize data members!
 		myMonster = new MarshmallowMonster("Pepe", 1, 4 , true, 6);
 		//userMonster = new MarshmallowMonster(null, 0, 0, false, 0);
-		
 	}
-//--------------CONSTRUCTOR SECTION---------------0
-	
+//--------------CONSTRUCTOR SECTION---------------
 
-	
 	
 //---------------METHOD SECTION-------------------
 	public void start() 
@@ -52,11 +48,10 @@ public class MonsterController
 		String armAnswer = inputScanner2.nextLine();
 //Printing out the answer that was taken
 		System.out.println("Your monster has " + armAnswer + "arms");
-		System.out.println("You Created a Monster! " + "It has " + armAnswer + " arms" + " and is named " + nameAnswer);
-	}
+		System.out.println("You Created a Monster! \n" + "It has " + armAnswer + " arms" + " and is named " + nameAnswer);
+		inputScanner.close();
+		inputScanner2.close();
 //-----------------------------------User Monster Output-------------------------------------
-
-	
+	}
 //---------------METHOD SECTION-------------------
-
 }
