@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 import model.MarshmallowMonster;
 //----------------Imports-------------------------
 
+
 public class MonsterController
 {
 //--------------DATA MEMBER SECTION---------------
@@ -48,18 +49,26 @@ public class MonsterController
 		
 		
 		String userMonsterArms = JOptionPane.showInputDialog(null,"How many arms does your monster have?");
+		if(validInt(userMonsterArms)) {
+			//This If statment checks if the input for the amount of arms the users monster will have is actuly an int
+			JOptionPane.showMessageDialog(null, "Your monster has " + userMonsterArms + " arms");
+			JOptionPane.showMessageDialog(null, "You Created a Monster! \n" + "It has "
+					+ userMonsterArms + " arms" + " and is named " + userMonsterName);	
+			int arms = Integer.parseInt(userMonsterArms);
+			userMonster.setArmCount(arms);
+		}
 //This is scanning any input and will take it in
 		//Scanner inputScanner2 = new Scanner(System.in);
 		//String armAnswer = inputScanner2.nextLine();
 //Printing out the answer that was taken
-		JOptionPane.showMessageDialog(null, "Your monster has " + userMonsterArms + " arms");
-		JOptionPane.showMessageDialog(null, "You Created a Monster! \n" + "It has "
-		+ userMonsterArms + " arms" + " and is named " + userMonsterName);
+		
 //		inputScanner.close();
 //		inputScanner2.close();
+		
 //-----------------------------------User Monster Output-------------------------------------
 	}
 	
+	//checks for an int
 	public boolean validInt(String maybeInt) 
 	{
 		boolean isValid = false;
@@ -74,18 +83,27 @@ public class MonsterController
 		return isValid;
 	}
 	
+	//checks for a double
 	public boolean validDouble(String maybeDouble) 
+
 	{
 		boolean isValid = false;
 		
 		try {
 			Double.parseDouble(maybeDouble);
 			isValid = true;
-		
-		return isValid;
-		} catch(NumberFormatExeption error){
-			JOption.showMessageDiolag(null, "The Double Try didnt work, input a Double.")
+		} catch(NumberFormatException error){
+			JOptionPane.showMessageDialog(null, "The Double Try didnt work, input a Double.");
 		}
+		return isValid;
 	}
+	
+	//checks for a string
+//	public String validString(String maybeString) {
+//		if(isValid == null){
+//			
+//		}
+//		return isValid;
+//	}
 //---------------METHOD SECTION-------------------
 }
