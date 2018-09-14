@@ -13,8 +13,9 @@ public class MarshmallowMonster
 
 	
 //--------------CONSTRUCTOR SECTION---------------	
-	public MarshmallowMonster(String name, double legCount,
- int eyeCount, boolean hasNoses, int armCount) 
+	public MarshmallowMonster(String name,
+			double legCount, int eyeCount,
+			boolean hasNoses, int armCount) 
 	{
 		this.name = name;
 		this.legCount = legCount;

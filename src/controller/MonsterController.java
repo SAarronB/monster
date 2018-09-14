@@ -2,6 +2,7 @@ package controller;
 
 //----------------Imports-------------------------
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 import model.MarshmallowMonster;
 //----------------Imports-------------------------
 
@@ -17,8 +18,8 @@ public class MonsterController
 	public MonsterController()
 	{
 		//Job 1: initialize data members!
-		myMonster = new MarshmallowMonster("Pepe", 1, 4 , true, 6);
-		//userMonster = new MarshmallowMonster(null, 0, 0, false, 0);
+		myMonster = new MarshmallowMonster("Pepe", 1,
+				4 , true, 6);
 	}
 //--------------CONSTRUCTOR SECTION---------------
 
@@ -26,29 +27,33 @@ public class MonsterController
 //---------------METHOD SECTION-------------------
 	public void start() 
 	{
+		//Use this method instead of printing to console
+		JOptionPane.showMessageDialog(null, "This is the JOptionPane method working");
+		
 //------------------------------------My Monster Output--------------------------------------
 		System.out.println(myMonster);
 		myMonster.setArmCount(32573586);
-		System.out.println("My monster has this many arms: " + myMonster.getArmCount());
+		JOptionPane.showMessageDialog(null, "My monster has this many arms: "
+		+ myMonster.getArmCount());
 //------------------------------------My Monster Output--------------------------------------
 		
 		
 //-----------------------------------User Monster Output-------------------------------------
-		System.out.print("What is your monsters name?");
+		JOptionPane.showInputDialog(null, "What is your monsters name?");
 //This is scanning any input and will take it in
 		Scanner inputScanner = new Scanner(System.in);
 		String nameAnswer = inputScanner.nextLine();
 //Printing out the answer that was taken
-		System.out.println("Your monsters name is: " + nameAnswer);
+		JOptionPane.showMessageDialog(null, "Your monsters name is: " + nameAnswer);
 		
 		
-		System.out.print("How many arms does your monster have?");
+		JOptionPane.showInputDialog(null,"How many arms does your monster have?");
 //This is scanning any input and will take it in
 		Scanner inputScanner2 = new Scanner(System.in);
 		String armAnswer = inputScanner2.nextLine();
 //Printing out the answer that was taken
-		System.out.println("Your monster has " + armAnswer + "arms");
-		System.out.println("You Created a Monster! \n" + "It has " + armAnswer + " arms" + " and is named " + nameAnswer);
+		JOptionPane.showMessageDialog(null, "Your monster has " + armAnswer + "arms");
+		JOptionPane.showMessageDialog(null, "You Created a Monster! \n" + "It has " + armAnswer + " arms" + " and is named " + nameAnswer);
 		inputScanner.close();
 		inputScanner2.close();
 //-----------------------------------User Monster Output-------------------------------------
