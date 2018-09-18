@@ -41,11 +41,14 @@ public class MonsterController
 		
 //-----------------------------------User Monster Output-------------------------------------
 		String userMonsterName = JOptionPane.showInputDialog(null, "What is your monsters name?");
-//This is scanning any input and will take it in
-		//Scanner inputScanner = new Scanner(System.in);
-		//String nameAnswer = inputScanner.nextLine();
-//Printing out the answer that was taken
-		JOptionPane.showMessageDialog(null, "Your monsters name is: " + userMonsterName);
+		
+		
+		if(userMonsterName.length()<5) {
+			userMonsterName=JOptionPane.showInputDialog(null, "Please Enter a Name for your Monster");
+		}else {
+			JOptionPane.showMessageDialog(null, "Your monsters name is: " + userMonsterName);	
+		}
+		
 		
 		
 		String userMonsterArms = JOptionPane.showInputDialog(null,"How many arms does your monster have?");
@@ -98,7 +101,6 @@ public class MonsterController
 		return isValid;
 	}
 	
-	//checks for a string
 //	public String validString(String maybeString) {
 //		if(isValid == null){
 //			
